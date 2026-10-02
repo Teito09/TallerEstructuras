@@ -1,0 +1,8 @@
+bin/
+*.class
+
+# Java project metadata
+.classpath
+.project
+.settings/
+.vscode
