@@ -37,6 +37,33 @@ class App{
         vuelo2.embarcar(21);
         vuelo2.desembarcar(42);
 
+        System.out.println("\nTanque principal: ");
+        DepositoDeAgua tanquePrincipal = new DepositoDeAgua();
+        DepositoDeAgua tanqueSecundario = new DepositoDeAgua();
+
+        tanquePrincipal.setDepositoDesborde(tanqueSecundario);
+
+        tanquePrincipal.setCapacidad(120.5);
+        tanquePrincipal.setVolumenActual(56.21);
+        tanquePrincipal.mostrarEstado();
+
+        tanqueSecundario.setCapacidad(89.6);
+        tanqueSecundario.setVolumenActual(2.1);
+
+        System.out.println("\nTanque principal:");
+
+        tanquePrincipal.agregarAgua(94.55);
+        tanquePrincipal.mostrarEstado();
+
+        System.out.println("\nTanque secundario:");
+        
+        tanqueSecundario.mostrarEstado();
+
+        System.out.println("\nTanque Principal:");
+
+        tanquePrincipal.quitarAgua(12.9);
+        tanquePrincipal.mostrarEstado();
 
     }
+        
 }
