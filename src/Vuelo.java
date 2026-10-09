@@ -5,6 +5,26 @@ public class Vuelo {
     private int ocupacion;
     private int capacidadMaxima;
 
+    public Vuelo() {
+    }
+    public Vuelo(String numero, String origen, String destino, int ocupacion) {
+        this.numero = numero;
+        this.origen = origen;
+        this.destino = destino;
+        this.ocupacion = 0;
+    }
+    public Vuelo (String numero, String origen, String destino, int ocupacion, int capacidadMaxima){
+        this.numero = numero;
+        this.origen = origen;
+        this.destino = destino;
+        if(ocupacion >= 0  && ocupacion <= capacidadMaxima){
+            this.ocupacion = ocupacion;
+        }else{
+            System.out.println("Ocupacion invalida.");
+        }
+        this.capacidadMaxima = capacidadMaxima;
+    }
+
     public int getCapacidadMaxima() {
         return capacidadMaxima;
     }

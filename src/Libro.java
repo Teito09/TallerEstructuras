@@ -3,6 +3,18 @@ public class Libro {
     private String autor;
     private boolean disponible = true;
 
+    public Libro() {
+        this.disponible = true;
+    }
+    public Libro(String titulo, String autor) {
+        this.autor = autor;
+        this.titulo = titulo;
+    }
+    public Libro (String titulo, String autor, boolean disponible){
+        this.autor = autor;
+        this.titulo = titulo;
+        this.disponible = disponible;
+    }
     public String getTitulo() {
         return titulo;
     }
@@ -11,24 +23,20 @@ public class Libro {
             this.titulo = titulo;
         }else{
             System.out.println("El titulo está vacio.");
-        }
-        
+        }   
     }
-
     public String getAutor() {
         return autor;
     }
     public void setAutor(String autor) {
         this.autor = autor;
     }
-
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
     public boolean isDisponible() {
         return disponible;
     }
-
     public void mostrarInfo(){
         System.out.println("Titulo: "+getTitulo());
         System.out.println("El autor es: "+getAutor());
@@ -36,7 +44,6 @@ public class Libro {
             System.out.println("Esta disponible.");
         }
     }
-
     public void prestar(){
         if(disponible){
             setDisponible(false);
@@ -45,7 +52,6 @@ public class Libro {
             System.out.println("El libro ya está prestado.");
         }
     }
-
     public void devolver(){
         if(!disponible){
             setDisponible(true);
@@ -54,5 +60,4 @@ public class Libro {
             System.out.println("El libro ya está entregado.");
         }
     }
-
 }
