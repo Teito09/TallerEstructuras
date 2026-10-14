@@ -91,6 +91,26 @@ class App{
         tanquePrincipal.quitarAgua(12.9);
         tanquePrincipal.mostrarEstado();
         */
-    }
-        
+        DepositoDeAgua deposito1 = new DepositoDeAgua(100, 80);
+        DepositoDeAgua deposito2 = new DepositoDeAgua(50, 30);
+
+        deposito1.setDepositoDesborde(deposito2);
+
+        System.out.println("Estado inicial:");
+        System.out.println("Depósito 1:");
+        deposito1.mostrarEstado();
+
+        System.out.println("Depósito 2:");
+        deposito2.mostrarEstado();
+
+        System.out.println("Agregando 40 litros al depósito 1...");
+        deposito1.agregarAgua(40);
+
+        System.out.println("\nEstado final:");
+        System.out.println("Depósito 1:");
+        deposito1.mostrarEstado();
+
+        System.out.println("Depósito 2:");
+        deposito2.mostrarEstado();
+    }       
 }
